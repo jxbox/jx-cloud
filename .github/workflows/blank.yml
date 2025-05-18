@@ -26,6 +26,9 @@ jobs:
       - uses: actions/checkout@v4
 
       # Runs a single command using the runners shell
+      - name: Terraform repo 
+        uses: hashicorp/setup-terraform@v3  
+
       - name: Terraform start 
         run:  Terraform init 
 
@@ -34,3 +37,8 @@ jobs:
         run: |
           Terraform plan,
           echo test, and check info .
+      - name: Terrafoem apply
+        run: terraform apply --auto-approve
+        env:
+          MY_ACCESS_KEY: ${{ secrets.MY_ACCESS_KEY}}
+          MY_ACCESS_SK: ${{ secrets.MY_ACCESS_SK}}
