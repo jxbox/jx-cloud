@@ -60,5 +60,5 @@ jobs:
       - name: Terrafoem apply
         run: terraform apply --auto-approve
         env:
-          MY_ACCESS_KEY: ${{ secrets.MY_ACCESS_KEY}}
-          MY_ACCESS_SK: ${{ secrets.MY_ACCESS_SK}}
+          TF_VAR_access_key: ${{ secrets.MY_ACCESS_KEY }}
+          TF_VAR_secret_key: ${{ secrets.MY_ACCESS_SK }}
