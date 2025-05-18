@@ -43,10 +43,10 @@ jobs:
           for dir in $dirs; do
             echo "Running Terraform in $dir"
             cd $dir
-            terraform init
-            terraform plan
+            ls
             cd -
-          done     
+          done 
+              
       - name: Terraform start v3
         run:  terraform init 
 
