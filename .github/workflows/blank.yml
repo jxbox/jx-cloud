@@ -30,14 +30,14 @@ jobs:
         uses: hashicorp/setup-terraform@v2
         with:
           terraform_version: '1.10.0'
-          
+
       - name: Terraform start v1
         run:  terraform init 
 
       # Runs a set of commands using the runners shell
       - name: Terraform plan 
         run: |
-          Terraform plan,
+          terraform plan,
           echo test, and check info .
       - name: Terrafoem apply
         run: terraform apply --auto-approve
