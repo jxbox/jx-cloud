@@ -28,7 +28,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Terraform repo 
         uses: hashicorp/setup-terraform@v2
-        with：
+        with:
           terraform_version: '1.10.0'
 
 
