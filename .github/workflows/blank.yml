@@ -31,14 +31,14 @@ jobs:
         with:
           terraform_version: '1.10.0'
 
-      - name: Terraform start v1
+      - name: Terraform start v3
         run:  terraform init 
 
       # Runs a set of commands using the runners shell
       - name: Terraform plan 
         run: |
           terraform  plan
-          
+
       - name: Terrafoem apply
         run: terraform apply --auto-approve
         env:
