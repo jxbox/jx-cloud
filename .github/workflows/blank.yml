@@ -27,7 +27,10 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Terraform repo 
-        uses: hashicorp/setup-terraform@v3  
+        uses: hashicorp/setup-terraform@v2
+        with：
+          terraform_version: '1.10.0'
+
 
       - name: Terraform start v1
         run:  Terraform init 
