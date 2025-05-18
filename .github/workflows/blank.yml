@@ -37,8 +37,8 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Terraform plan 
         run: |
-          terraform plan,
-          echo test, and check info .
+          terraform  plan
+          
       - name: Terrafoem apply
         run: terraform apply --auto-approve
         env:
