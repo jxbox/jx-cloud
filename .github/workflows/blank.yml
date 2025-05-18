@@ -29,7 +29,7 @@ jobs:
       - name: Terraform repo 
         uses: hashicorp/setup-terraform@v3  
 
-      - name: Terraform start 
+      - name: Terraform start v1
         run:  Terraform init 
 
       # Runs a set of commands using the runners shell
