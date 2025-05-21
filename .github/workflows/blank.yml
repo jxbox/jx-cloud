@@ -35,18 +35,6 @@ jobs:
         run: |
           echo "dirs=$(find envs -type f -name '*.tf' -exec firname {} \; | sort -u | paste -sd ',' -)" >> $GITHUB_OUTPUT
 
-
-      - name: Run each folder
-        run: |
-          # 查找所有包含 .tf 文件的目录
-          dirs=$(find . -type f -name "*.tf" -exec dirname {} \; | sort -u)
-          for dir in $dirs; do
-            echo "Running Terraform in $dir"
-            cd $dir
-            ls
-            cd -
-          done 
-              
       - name: Terraform start v3
         run:  terraform init 
 
